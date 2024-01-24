@@ -63,4 +63,13 @@ public class CameraMovement : MonoBehaviour
         cam3.SetActive(false);
         cam4.SetActive(true);
     }
+
+    public void ResetCamera()
+    {
+        gameObject.SetActive(true);
+        cam1.SetActive(false);
+        cam2.SetActive(false);
+        cam3.SetActive(false);
+        cam4.SetActive(false);
+    }
 }
