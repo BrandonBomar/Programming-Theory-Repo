@@ -3,7 +3,11 @@ guid: 3f41116d3cb00bc43bc3a45c8cb19fef
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - wav_Tree: {fileID: 8300000, guid: 94c93377631b5c14e959b951b435b46a, type: 3}
+  - healthBar: {instanceID: 0}
+  - healthSlider: {instanceID: 0}
+  - cHealth: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

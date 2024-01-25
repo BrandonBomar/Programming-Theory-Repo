@@ -7,7 +7,6 @@ using TMPro;
 public class BaseTree : MonoBehaviour
 {
     string targetTag = "Tree";
-    string replaceTag = "Dead";
 
     public AudioClip wav_Tree;
     public int maxHealth = 25;
@@ -16,6 +15,19 @@ public class BaseTree : MonoBehaviour
     public Slider healthSlider;
     public TMP_Text cHealth;
     public int damageAmount;
+
+    public ParticleSystem leafParticles;
+    public Color leafColor
+    {
+        get 
+        {
+            return leafColor;
+        }
+        set 
+        {
+            leafColor = value;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -81,11 +93,12 @@ public class BaseTree : MonoBehaviour
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.clip = wav_Tree;
         audioSource.Play();
+        leafParticles.Play();
     }
 
     public virtual void Die()
     {
-       // Add switch instance between models
+       
     }
 
     public virtual void Revive()
