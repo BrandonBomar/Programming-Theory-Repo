@@ -23,6 +23,8 @@ public class TitleScreen : MonoBehaviour
     public GameObject encapsulationButton;
     public GameObject overviewButton;
     public GameObject backButton;
+    public GameObject healthBar;
+    public GameObject blockScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,8 @@ public class TitleScreen : MonoBehaviour
         encapsulationButton.SetActive(false);
         overviewButton.SetActive(false);
         backButton.SetActive(false);
+        healthBar.SetActive(false);
+        blockScreen.SetActive(false);
     }
 
     public void StartNew()
@@ -53,6 +57,7 @@ public class TitleScreen : MonoBehaviour
         encapsulationButton.SetActive(true);
         overviewButton.SetActive(true);
         backButton.SetActive(true);
+        blockScreen.SetActive(true);
     }
     
     public void Exit()

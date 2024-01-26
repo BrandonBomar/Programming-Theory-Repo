@@ -8,7 +8,6 @@ public class CameraMovement : MonoBehaviour
     public GameObject cam2;
     public GameObject cam3;
     public GameObject cam4;
-    public GameObject healthSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +17,6 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(false);
         cam4.SetActive(false);
-        healthSlider.SetActive(false);
     }
 
     public void Overview()
@@ -28,7 +26,6 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(false);
         cam4.SetActive(false);
-        healthSlider.SetActive(false);
     }
 
     public void Inheritance()
@@ -38,7 +35,6 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(false);
         cam4.SetActive(false);
-        healthSlider.SetActive(true);
     }
 
     public void Abstraction()
@@ -48,7 +44,6 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(true);
         cam3.SetActive(false);
         cam4.SetActive(false);
-        healthSlider.SetActive(true);
     }
 
     public void Polymorphism()
@@ -58,7 +53,6 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(true);
         cam4.SetActive(false);
-        healthSlider.SetActive(true);
     }
 
     public void Encapsulation()
@@ -68,7 +62,6 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(false);
         cam4.SetActive(true);
-        healthSlider.SetActive(true);
     }
 
     public void ResetCamera()
@@ -78,6 +71,5 @@ public class CameraMovement : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(false);
         cam4.SetActive(false);
-        healthSlider.SetActive(true);
     }
 }

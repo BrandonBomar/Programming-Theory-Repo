@@ -10,14 +10,14 @@ public class BaseTree : MonoBehaviour
 
     public AudioClip wav_Tree;
     public int maxHealth = 25;
-    private int currentHealth;
+    public int currentHealth;
     public GameObject healthBar;
-    public Slider healthSlider;
     public TMP_Text cHealth;
     public int damageAmount;
 
-    public ParticleSystem leafParticles;
-    public Color leafColor
+    [SerializeField]
+    private Color leafColor;
+    public Color LeafColor
     {
         get 
         {
@@ -33,7 +33,6 @@ public class BaseTree : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        SetMaxHealth(maxHealth);
     }
 
     public void OnMouseEnter()
@@ -53,6 +52,7 @@ public class BaseTree : MonoBehaviour
         if (CompareTag(targetTag))
         {
             healthBar.SetActive(false);
+            cHealth.SetText("Click!");
         }
     }
 
@@ -70,15 +70,8 @@ public class BaseTree : MonoBehaviour
         }
     }
 
-    public void SetMaxHealth(int health)
-    {
-        healthSlider.maxValue = health;
-        healthSlider.value = health;
-    }
-
     public void SetHealth(int health)
     {
-        healthSlider.value = health;
         cHealth.SetText(currentHealth.ToString());
     }
 
@@ -93,12 +86,11 @@ public class BaseTree : MonoBehaviour
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.clip = wav_Tree;
         audioSource.Play();
-        leafParticles.Play();
     }
 
     public virtual void Die()
     {
-       
+       // Code in child classes
     }
 
     public virtual void Revive()
